@@ -1,0 +1,122 @@
+Génération I05 | mode=SIMULATION | tâche=5e7f0bf2-863d-452b-a106-408e6ac3ff61 | agent=IntegrationAgent
+Parcours : [ROUTER_RECEIVED, CONTEXT_PREPARED, SPECIALIST_DELEGATED, LLM_RETURNED, ROUTER_RETURNED]
+Relecture I06/I07 : transport=SIMULATED. Données en mémoire.
+La commande approuver déclenche la transmission de la version exacte à ce transport.
+Envoi simulé uniquement : aucun email réel transmis.
+Message reçu : Notifications en double
+Notre environnement de test reçoit deux notifications pour un paiement.
+Commandes : voir | version N | historique | editer fichier-UTF8 | objet texte | destinataires email,email
+approuver | rejeter [commentaire] (régénère) | regenerer (réessaie après échec) | attendre | annuler | aide | quitter
+approuver transmet la version validée ; envoyer (idempotent) | boite-sortie | reessayer-envoi (échec certain uniquement)
+Brouillon v1 | révision=1 | état=GENERATED | approuvé=false | régénération en cours=false
+Agent de génération : IntegrationAgent/v3
+Routage : IntegrationAgent score=6 [règle=integration-body; champ=BODY; catégorie=integration; poids=3, règle=integration-subject; champ=SUBJECT; catégorie=integration; poids=3]
+Sources du contexte de génération : [integration/v1 (Procédure technique publique fictive v1), integration-client-a/v1 (Dossier synthétique d'intégration client A v1), public-service/v1 (Présentation publique fictive PayBridge v1)]
+Objet : Re: Notifications en double
+Destinataires : [alice@client-a.example]
+Simulation du modèle d'origine : true
+--- TEXTE À RELIRE ---
+[SIMULATION : texte fixe, aucun modèle appelé]
+Bonjour,
+Merci pour votre message. Pour poursuivre l'accompagnement à l'intégration, pourriez-vous préciser la version du SDK et l'environnement concerné ?
+Cordialement,
+L'équipe PayBridge
+--- FIN DU TEXTE ---
+Brouillon v1 | révision=2 | état=APPROVED | approuvé=true | régénération en cours=false
+Agent de génération : IntegrationAgent/v3
+Routage : IntegrationAgent score=6 [règle=integration-body; champ=BODY; catégorie=integration; poids=3, règle=integration-subject; champ=SUBJECT; catégorie=integration; poids=3]
+Sources du contexte de génération : [integration/v1 (Procédure technique publique fictive v1), integration-client-a/v1 (Dossier synthétique d'intégration client A v1), public-service/v1 (Présentation publique fictive PayBridge v1)]
+Objet : Re: Notifications en double
+Destinataires : [alice@client-a.example]
+Simulation du modèle d'origine : true
+--- TEXTE À RELIRE ---
+[SIMULATION : texte fixe, aucun modèle appelé]
+Bonjour,
+Merci pour votre message. Pour poursuivre l'accompagnement à l'intégration, pourriez-vous préciser la version du SDK et l'environnement concerné ?
+Cordialement,
+L'équipe PayBridge
+--- FIN DU TEXTE ---
+Approbation du contenu exact enregistrée.
+Transmission v1 | tentative=fdbce6a3-2b64-416f-8e1d-d81720588cbe | mode=SIMULATED | statut=SIMULATED | code=LOCAL_OUTBOX_ONLY
+Envoi simulé enregistré en boîte locale ; aucun email réel livré.
+Brouillon v2 | révision=5 | état=EDITED | approuvé=false | régénération en cours=false
+Agent de génération : IntegrationAgent/v3
+Routage : IntegrationAgent score=6 [règle=integration-body; champ=BODY; catégorie=integration; poids=3, règle=integration-subject; champ=SUBJECT; catégorie=integration; poids=3]
+Sources du contexte de génération : [integration/v1 (Procédure technique publique fictive v1), integration-client-a/v1 (Dossier synthétique d'intégration client A v1), public-service/v1 (Présentation publique fictive PayBridge v1)]
+Objet : Re: Notifications en double
+Destinataires : [alice@client-a.example]
+Simulation du modèle d'origine : true
+--- TEXTE À RELIRE ---
+Bonjour,
+
+Merci pour votre retour. Pour poursuivre l'analyse des notifications reçues en double dans votre environnement de test, pourriez-vous nous préciser la version du SDK utilisée ? Merci de ne transmettre aucune clé secrète ni donnée bancaire.
+
+Cordialement,
+L'équipe PayBridge
+
+--- FIN DU TEXTE ---
+Transmission v1 | tentative=fdbce6a3-2b64-416f-8e1d-d81720588cbe | mode=SIMULATED | statut=SIMULATED | code=LOCAL_OUTBOX_ONLY
+Envoi simulé enregistré en boîte locale ; aucun email réel livré.
+Toute modification effective exige une nouvelle approbation.
+Version rejetée conservée ; régénération demandée. Tapez attendre ou annuler.
+Régénération : COMPLETED ; nouvelle version=true
+Brouillon v3 | révision=8 | état=GENERATED | approuvé=false | régénération en cours=false
+Agent de génération : IntegrationAgent/v3
+Routage : IntegrationAgent score=6 [règle=integration-body; champ=BODY; catégorie=integration; poids=3, règle=integration-subject; champ=SUBJECT; catégorie=integration; poids=3]
+Sources du contexte de génération : [integration/v1 (Procédure technique publique fictive v1), integration-client-a/v1 (Dossier synthétique d'intégration client A v1), public-service/v1 (Présentation publique fictive PayBridge v1)]
+Objet : Re: Notifications en double
+Destinataires : [alice@client-a.example]
+Simulation du modèle d'origine : true
+--- TEXTE À RELIRE ---
+[SIMULATION : texte fixe, aucun modèle appelé]
+Bonjour,
+Merci pour votre message. Pour poursuivre l'accompagnement à l'intégration, pourriez-vous préciser la version du SDK et l'environnement concerné ?
+Cordialement,
+L'équipe PayBridge
+--- FIN DU TEXTE ---
+Transmission v1 | tentative=fdbce6a3-2b64-416f-8e1d-d81720588cbe | mode=SIMULATED | statut=SIMULATED | code=LOCAL_OUTBOX_ONLY
+Envoi simulé enregistré en boîte locale ; aucun email réel livré.
+Brouillon v3 | révision=9 | état=APPROVED | approuvé=true | régénération en cours=false
+Agent de génération : IntegrationAgent/v3
+Routage : IntegrationAgent score=6 [règle=integration-body; champ=BODY; catégorie=integration; poids=3, règle=integration-subject; champ=SUBJECT; catégorie=integration; poids=3]
+Sources du contexte de génération : [integration/v1 (Procédure technique publique fictive v1), integration-client-a/v1 (Dossier synthétique d'intégration client A v1), public-service/v1 (Présentation publique fictive PayBridge v1)]
+Objet : Re: Notifications en double
+Destinataires : [alice@client-a.example]
+Simulation du modèle d'origine : true
+--- TEXTE À RELIRE ---
+[SIMULATION : texte fixe, aucun modèle appelé]
+Bonjour,
+Merci pour votre message. Pour poursuivre l'accompagnement à l'intégration, pourriez-vous préciser la version du SDK et l'environnement concerné ?
+Cordialement,
+L'équipe PayBridge
+--- FIN DU TEXTE ---
+Transmission v1 | tentative=fdbce6a3-2b64-416f-8e1d-d81720588cbe | mode=SIMULATED | statut=SIMULATED | code=LOCAL_OUTBOX_ONLY
+Envoi simulé enregistré en boîte locale ; aucun email réel livré.
+Approbation du contenu exact enregistrée.
+Transmission v3 | tentative=529e4550-d0d7-4ad8-9f31-e2fb0c970439 | mode=SIMULATED | statut=SIMULATED | code=LOCAL_OUTBOX_ONLY
+Envoi simulé enregistré en boîte locale ; aucun email réel livré.
+Transmission v3 | tentative=529e4550-d0d7-4ad8-9f31-e2fb0c970439 | mode=SIMULATED | statut=SIMULATED | code=LOCAL_OUTBOX_ONLY
+Envoi simulé enregistré en boîte locale ; aucun email réel livré.
+Transmission v3 | tentative=529e4550-d0d7-4ad8-9f31-e2fb0c970439 | mode=SIMULATED | statut=SIMULATED | code=LOCAL_OUTBOX_ONLY
+Envoi simulé enregistré en boîte locale ; aucun email réel livré.
+Tentatives du brouillon courant :
+Transmission v1 | tentative=fdbce6a3-2b64-416f-8e1d-d81720588cbe | mode=SIMULATED | statut=SIMULATED | code=LOCAL_OUTBOX_ONLY
+Envoi simulé enregistré en boîte locale ; aucun email réel livré.
+Transmission v3 | tentative=529e4550-d0d7-4ad8-9f31-e2fb0c970439 | mode=SIMULATED | statut=SIMULATED | code=LOCAL_OUTBOX_ONLY
+Envoi simulé enregistré en boîte locale ; aucun email réel livré.
+Version 1 | GENERATED | tâche=5e7f0bf2-863d-452b-a106-408e6ac3ff61
+Version 2 | EDITED | tâche=5e7f0bf2-863d-452b-a106-408e6ac3ff61
+Version 3 | GENERATED | tâche=10958025-4891-42c9-877c-f9bc25395b65
+Décision GENERATED | version=1 | 2026-11-13T00:09:20.870358200Z
+Décision APPROVED | version=1 | 2026-11-13T00:09:20.912438400Z
+Décision SEND_REQUESTED | version=1 | 2026-11-13T00:09:20.927729300Z
+Décision SEND_SIMULATED | version=1 | 2026-11-13T00:09:20.936553500Z
+Décision EDITED | version=2 | 2026-11-13T00:09:20.940675300Z
+Décision REJECTED | version=2 | 2026-11-13T00:09:20.944205Z
+Décision REGENERATION_REQUESTED | version=2 | 2026-11-13T00:09:20.946858700Z
+Décision GENERATED | version=3 | 2026-11-13T00:09:21.021967900Z
+Décision APPROVED | version=3 | 2026-11-13T00:09:21.026223800Z
+Décision SEND_REQUESTED | version=3 | 2026-11-13T00:09:21.027747600Z
+Décision SEND_SIMULATED | version=3 | 2026-11-13T00:09:21.027747600Z
+Approbations historiques : [1, 3]
+Session terminée ; les statuts de transmission restent ceux affichés.

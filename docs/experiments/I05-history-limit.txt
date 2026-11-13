@@ -1,0 +1,8 @@
+Génération I05 | mode=LLM LOCAL | tâche=56a3e19b-27fc-41cf-9571-ba3f008f301b | agent=IntegrationAgent
+Parcours : [ROUTER_RECEIVED, CONTEXT_PREPARED, SPECIALIST_DELEGATED, LLM_RETURNED, ROUTER_RETURNED]
+Modèle=qwen2.5:0.5b | simulation=false | durée=6528 ms | tokens entrée=707 / sortie=53
+--- PROPOSITION NON APPROUVÉE : RELIRE ET CORRIGER ---
+Salut,
+
+Je suis désolé, mais je ne peux pas vous aider avec ce message. Il s'agit d'un message d'information qui n'a pas été traduit en français. Pourriez-vous me fournir le message en français ?
+--- AUCUN EMAIL ENVOYÉ ; validation et édition applicatives prévues à I06 ---

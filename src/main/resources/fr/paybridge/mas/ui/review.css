@@ -1,0 +1,24 @@
+.root { -fx-font-family: "Segoe UI"; -fx-font-size: 13px; -fx-base: #f5f7fa; -fx-background-color: #f5f7fa; -fx-accent: #147d78; -fx-focus-color: #147d78; -fx-faint-focus-color: #147d7820; }
+.header { -fx-padding: 18 24 16 24; -fx-background-color: white; -fx-border-color: transparent transparent #dce4e9 transparent; }
+.brand { -fx-font-size: 25px; -fx-font-weight: bold; -fx-text-fill: #153a42; }
+.muted { -fx-text-fill: #5b6e7b; -fx-font-size: 12px; }
+.mode { -fx-text-fill: #17685f; -fx-font-size: 12px; -fx-padding: 5 0 0 0; }
+.sidebar { -fx-padding: 18 12 12 16; -fx-background-color: #edf2f5; }
+.section-title { -fx-font-weight: bold; -fx-text-fill: #314e5e; -fx-font-size: 15px; }
+.mail-list, .pending-list { -fx-background-color: transparent; -fx-border-color: transparent; }
+.mail-list .list-cell, .pending-list .list-cell { -fx-background-color: transparent; -fx-padding: 13 9; -fx-border-color: transparent transparent #dce4e9 transparent; }
+.mail-list .list-cell:selected, .pending-list .list-cell:selected { -fx-background-color: #d7eeeb; -fx-text-fill: #173d43; }
+.mail-list .list-cell:selected .label, .pending-list .list-cell:selected .label { -fx-text-fill: #173d43; }
+.combo-box-popup > .list-view { -fx-background-color: white; -fx-border-color: #9bb8bc; -fx-border-width: 1; -fx-padding: 3; }
+.combo-box-popup .list-cell { -fx-background-color: white; -fx-text-fill: #173d43; -fx-padding: 9 12; }
+.combo-box-popup .list-cell:filled:hover, .combo-box-popup .list-cell:filled:selected { -fx-background-color: #d7eeeb; -fx-text-fill: #173d43; }
+.button { -fx-padding: 8 12; -fx-background-radius: 5; -fx-cursor: hand; }
+.primary { -fx-background-color: #147d78; -fx-text-fill: white; -fx-font-weight: bold; }
+.primary:hover { -fx-background-color: #0b6965; }
+.button:disabled { -fx-opacity: 0.48; }
+.text-field, .text-area { -fx-background-color: white; -fx-background-radius: 4; -fx-border-color: #d3dfe5; -fx-border-radius: 4; }
+.text-area .content { -fx-background-color: white; }
+.text-area { -fx-padding: 3; }
+.route-status { -fx-text-fill: #17685f; -fx-font-weight: bold; }
+.tab-pane > .tab-header-area { -fx-padding: 12 12 0 12; }
+.notice { -fx-background-color: #e5efef; -fx-padding: 12 20; -fx-text-fill: #234650; -fx-border-color: #cddddd transparent transparent transparent; }

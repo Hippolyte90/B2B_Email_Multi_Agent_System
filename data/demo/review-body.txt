@@ -1,0 +1,6 @@
+Bonjour,
+
+Merci pour votre retour. Pour poursuivre l'analyse des notifications reçues en double dans votre environnement de test, pourriez-vous nous préciser la version du SDK utilisée ? Merci de ne transmettre aucune clé secrète ni donnée bancaire.
+
+Cordialement,
+L'équipe PayBridge

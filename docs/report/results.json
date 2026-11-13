@@ -1,0 +1,65 @@
+{
+  "dataset": "Flux synthétique de vingt emails, quatre par catégorie",
+  "generation_count": 20,
+  "draft_count": 20,
+  "messages": 20,
+  "work_states": {
+    "COMPLETED": 20
+  },
+  "approvals": 0,
+  "send_attempts": 0,
+  "simulated_outbox": 0,
+  "by_agent": {
+    "AccountAdminAgent": 4,
+    "CommercialAgent": 4,
+    "GenericAgent": 4,
+    "IntegrationAgent": 4,
+    "OnsiteSupportAgent": 4
+  },
+  "by_category": {
+    "administration": 4,
+    "commercial": 4,
+    "general": 4,
+    "integration": 4,
+    "sur-site": 4
+  },
+  "routing_matches_expected_category": 20,
+  "elapsed_seconds": {
+    "min": 1.5077081,
+    "median": 6.0749112,
+    "mean": 7.572,
+    "max": 33.4511051
+  },
+  "input_tokens": {
+    "min": 393,
+    "median": 580.0,
+    "mean": 597.45,
+    "max": 884
+  },
+  "output_tokens": {
+    "min": 36,
+    "median": 158.0,
+    "mean": 175.25,
+    "max": 739
+  },
+  "response_words": {
+    "min": 25,
+    "median": 91.5,
+    "mean": 96.25,
+    "max": 406
+  },
+  "responses_at_most_120_words": 17,
+  "settings": {
+    "model": "qwen2.5:0.5b",
+    "contextCapacity": 8192,
+    "outputLimit": 1024,
+    "temperature": 0.2,
+    "seed": 42,
+    "timeout": "PT2M"
+  },
+  "method_limits": [
+    "Corpus de démonstration, pas un jeu de test indépendant",
+    "Durée du gateway, pas latence complète depuis réception",
+    "Comptage lexical automatique, pas jugement de qualité"
+  ]
+}

@@ -1,0 +1,57 @@
+# Préparation interne / assistance IA : conservée localement, hors rendu
+/AGENTS.md
+/MAS_SPEC.md
+/.agents/
+/.codex/
+
+# Copie du sujet fourni par l’enseignant, pas un livrable du groupe
+/multi_agent_project_en (1).pdf
+
+# Build Maven et outils locaux
+/target/
+/.tools/
+/.m2-local/
+*.class
+
+# Exécution locale : modèles Ollama, cache JavaFX, emails et brouillons
+/data/runtime/
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite-journal
+*.sqlite3-wal
+*.sqlite3-shm
+*.sqlite3-journal
+*.session.lock
+*.pid
+*.log
+
+# Configuration privée et identifiants OAuth (conserver config/examples/)
+/config/local/
+.env
+.env.*
+!.env.example
+!.env.sample
+client_secret*.json
+credentials.json
+token.json
+tokens.json
+
+# Fichiers personnels des IDE
+/.idea/
+*.iml
+.classpath
+.project
+.settings/
+
+# Caches Python et fichiers temporaires des éditeurs / du système
+__pycache__/
+*.py[cod]
+*.tmp
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini
