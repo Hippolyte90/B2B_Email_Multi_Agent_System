@@ -53,19 +53,11 @@ La fermeture annule le préchargement et le flux, arrête les minuteurs et ferme
 
 ### Comportements actuels à préserver
 
-- La GUI n’affiche aucune réponse prédéfinie. Sans génération réussie, le corps reste vide ; `--fake` désactive la rédaction et ne démarre pas Ollama.
 - Le flux normal importe vingt emails synthétiques, quatre par catégorie, ordre mélangé, avec délai de 1–3 minutes après disponibilité puis entre arrivées. `--demo-fast` utilise 1–3 secondes avec un bandeau explicite.
 - Le modèle et les données persistées sont séparés : modèles existants dans `data/runtime/ollama-models`, données métier en SQLite, schéma courant **6**. Le préchargement sans email n’écrit aucun brouillon.
 - Les instructions communes de réponse courte entrent dans le budget de contexte. Les paramètres fixes `repeat_penalty=1.15` et `repeat_last_n=256` limitent les répétitions sans contourner le refus d’une réponse tronquée. Le code d’échec assaini remonte au bandeau et à l’éditeur.
 - Les dossiers, la liste et la lecture occupent environ 13/69/18 au lancement. La disposition, les séparateurs, le défilement et le style des popups relèvent de JavaFX uniquement.
 - La migration 6 retire des listes actives les anciens textes fixes simulés non modifiés et les archive. Les éditions humaines et tout historique de transport réel sont conservés.
-
-### Validation et limites actuelles
-
-Dernière validation fonctionnelle : **559 tests réussis**, zéro échec/erreur/ignoré (446 unitaires/parcours, 87 SQLite, 26 HTTP). Contrôle du démarrage : démarrage d’Ollama et préchargement du modèle existant. Contrôle de génération : vingt emails synthétiques, vingt brouillons non approuvés, quatre par agent, zéro erreur et zéro envoi. Ces contrôles ne démontrent ni une réussite garantie ni la qualité métier du petit modèle.
-
-Références : `docs/experiments/I19-auto-start-ollama.md` et `docs/experiments/I20-generation-truncation.md`. Le connecteur Gmail reste facultatif et testé avec doublures ; OAuth et échanges Google réels ne sont pas validés. Les comparaisons, le rapport/contributions et la validation finale de livraison restent à effectuer.
-
 
 ## Organisation des agents
 
