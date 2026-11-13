@@ -51,14 +51,6 @@ L’exécuteur du modèle réalise les appels bloquants et le démarrage de proc
 
 La fermeture annule le préchargement et le flux, arrête les minuteurs et ferme les exécuteurs/la session. Un résultat tardif ne redémarre pas le flux. Un processus lancé mais encore en attente est nettoyé en cas d’échec ou d’annulation ; un serveur prêt reste en arrière-plan pour les sessions suivantes. Un serveur préexistant n’est jamais arrêté. Il n’y a ni installation ni téléchargement automatique de modèle.
 
-### Comportements actuels à préserver
-
-- Le flux normal importe vingt emails synthétiques, quatre par catégorie, ordre mélangé, avec délai de 1–3 minutes après disponibilité puis entre arrivées. `--demo-fast` utilise 1–3 secondes avec un bandeau explicite.
-- Le modèle et les données persistées sont séparés : modèles existants dans `data/runtime/ollama-models`, données métier en SQLite, schéma courant **6**. Le préchargement sans email n’écrit aucun brouillon.
-- Les instructions communes de réponse courte entrent dans le budget de contexte. Les paramètres fixes `repeat_penalty=1.15` et `repeat_last_n=256` limitent les répétitions sans contourner le refus d’une réponse tronquée. Le code d’échec assaini remonte au bandeau et à l’éditeur.
-- Les dossiers, la liste et la lecture occupent environ 13/69/18 au lancement. La disposition, les séparateurs, le défilement et le style des popups relèvent de JavaFX uniquement.
-- La migration 6 retire des listes actives les anciens textes fixes simulés non modifiés et les archive. Les éditions humaines et tout historique de transport réel sont conservés.
-
 ## Organisation des agents
 
 Les définitions sont chargées depuis `config/agents/` et leurs prompts depuis `config/prompts/`. Les noms et catégories appartiennent à la configuration de démonstration, pas au noyau générique.
