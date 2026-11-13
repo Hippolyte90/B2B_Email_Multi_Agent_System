@@ -14,7 +14,7 @@ L’application ne traite aucun paiement et ne réserve aucun intervenant. Les d
 - Configuration des agents, prompts, sources et paramètres d’inférence ; persistance locale SQLite.
 - Connecteur Gmail facultatif avec OAuth, préparé et testé avec un fournisseur de test. Son utilisation sur un compte Google réel reste à valider.
 
-L’organisation du code et les choix de conception sont décrits dans [ARCHITECTURE.md](ARCHITECTURE.md). Le rapport est disponible en [PDF](docs/report/RAPPORT.pdf), en [Word modifiable](docs/report/RAPPORT.docx) et en [Markdown](docs/report/RAPPORT.md). Il présente la conception et les résultats mesurés.
+L’organisation du code et les choix de conception sont décrits dans [ARCHITECTURE.md](ARCHITECTURE.md).
 
 ## Prérequis
 
