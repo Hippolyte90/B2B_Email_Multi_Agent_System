@@ -15,6 +15,7 @@
 
 # Exécution locale : modèles Ollama, cache JavaFX, emails et brouillons
 /data/runtime/
+/docs
 *.sqlite
 *.sqlite3
 *.sqlite-wal
