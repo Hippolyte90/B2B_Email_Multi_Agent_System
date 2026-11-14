@@ -126,7 +126,7 @@ Les instantanés sont en clair. Le journal de diagnostic contient des identifian
 
 `ManagedOllamaLoader` décore la préparation par la vérification et le démarrage du processus installé. L’exécutable est recherché dans PATH puis dans l’emplacement Windows standard. `ProcessBuilder` ne lance aucun shell ; les variables du processus fixent l’adresse locale, le stockage de modèles du projet et la désactivation du cloud/debug. Les tests injectent les opérations de processus, de disponibilité et de temps.
 
-`GmailClient`, `GmailMailbox` et `GmailEmailSender` isolent le protocole fournisseur derrière les ports applicatifs. L’authentification OAuth passe par le navigateur système et un rappel loopback. La réception est bornée, les identifiants sont isolés par compte et les changements distants sont explicites. Les erreurs sont traduites sans exposer de réponse brute ou de secret. Le connecteur est testé avec doublures ; son parcours réel reste à valider. Le [guide Gmail](docs/INTERFACE_ET_GMAIL.md) précise ses limites.
+`GmailClient`, `GmailMailbox` et `GmailEmailSender` isolent le protocole fournisseur derrière les ports applicatifs. L’authentification OAuth passe par le navigateur système et un rappel loopback. La réception est bornée, les identifiants sont isolés par compte et les changements distants sont explicites. Les erreurs sont traduites sans exposer de réponse brute ou de secret. Le connecteur est testé avec doublures ; son parcours réel reste à valider.
 
 ## Patterns utilisés
 
@@ -141,29 +141,3 @@ Les instantanés sont en clair. Le journal de diagnostic contient des identifian
 | Facade | Fournir aux présentateurs une API de travail via `ReviewWorkspaceService` |
 
 Les objets du domaine sont immuables et les interfaces sont placées aux frontières effectivement substituables. L’architecture évite les microservices et les abstractions de stockage génériques sans usage.
-
-## Extensibilité
-
-Un nouveau spécialiste se décrit par son rôle, son prompt, ses sources et ses règles de routage. Un moteur utilisant un autre protocole nécessite un adaptateur de `LocalLlmGateway` et, si nécessaire, de `LocalModelLoader`. Un stockage alternatif implémente les ports de dépôt et leurs garanties transactionnelles. Ces évolutions doivent préserver l’isolation des clients, la corrélation des résultats et la validation exacte avant transmission.
-
-Les tests unitaires utilisent horloges et exécuteurs contrôlés, dépôts en mémoire et fournisseurs de test. Les intégrations HTTP/SQLite et les essais avec un modèle réel sont séparés. Les résultats de génération ne sont pas comparés à une chaîne exacte dans les tests unitaires.
-
-## Décisions de conception
-
-| Question du §14 | Décision et justification |
-| --- | --- |
-| 1. Qu'est-ce qu'un agent ? | Entité logicielle identifiable avec rôle, instructions, connaissances autorisées et contrat tâche/résultat ; pas nécessairement un processus autonome |
-| 2. Quelles responsabilités ? | Routeur : orientation et coordination ; spécialiste : proposition dans son rôle ; contrôle de validation et infrastructure séparés |
-| 3. Quelles informations possède-t-il ? | Définition versionnée et contexte autorisé sélectionné pour la tâche ; aucun accès implicite à tous les clients |
-| 4. Comment communiquent-ils ? | Messages typés `AgentTask` / `AgentResult` corrélés, transmis dans le même processus |
-| 5. Comment choisir un agent ? | Stratégie configurable multi-indices, motifs et classement ; adresse seule insuffisante |
-| 6. Plusieurs agents adaptés ? | Ambiguïté déclarée selon la marge ; décision humaine dans le socle ; coopération multiagents possible plus tard |
-| 7. Aucun agent adapté ? | GenericAgent et clarification, sans invention de catégorie ou de contexte |
-| 8. Représentation des contextes ? | Sources locales versionnées avec portée, visibilité et provenance ; résultat sélectionné `ContextBundle` |
-| 9. Historique de conversation ? | Événements typés et versions persistées, avec distinction stricte brouillons/réponses envoyées |
-| 10. Limiter le contexte ? | Autoriser puis sélectionner/dédupliquer, budget avec réserve de sortie et mémoire bornée |
-| 11. Ajouter un agent ? | Enregistrement d'une définition, prompt, règles et sources, sans modifier substantiellement le noyau |
-| 12. Changer de LLM ? | Configuration pour un modèle compatible ; nouvel adaptateur si le protocole change |
-| 13. Quelles données persistantes ? | Agents/prompts et versions, sources et références, emails/fils, décisions, brouillons, retours, approbations et tentatives d'envoi |
-| 14. Avantages et limites ? | Spécialisation, isolation et explicabilité ; coût d'orchestration, erreurs de routage, budget local, hallucinations, injections et maintenance des contextes ; bénéfices à mesurer |
-

@@ -1,11 +1,4 @@
-# Préparation interne / assistance IA : conservée localement, hors rendu
-/AGENTS.md
-/MAS_SPEC.md
-/.agents/
-/.codex/
 
-# Copie du sujet fourni par l’enseignant, pas un livrable du groupe
-/multi_agent_project_en (1).pdf
 
 # Build Maven et outils locaux
 /target/

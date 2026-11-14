@@ -51,7 +51,7 @@ Le JAR exécutable est produit dans `target/mas-email-assistant-0.1.0-SNAPSHOT.j
 
 La suite standard ne requiert ni Ollama ni compte Google, ne télécharge aucun modèle et n’envoie aucun email. Les intégrations HTTP utilisent uniquement des serveurs de test sur loopback ; SQLite utilise des bases temporaires. Le cache Maven local est configuré dans `.mvn/maven.config`.
 
-Dernière validation fonctionnelle acquise : **559 tests réussis**, sans échec, erreur ou test ignoré : 446 unitaires/parcours, 87 SQLite et 26 HTTP. Un contrôle séparé avec le modèle local a traité vingt emails synthétiques en vingt brouillons non approuvés, sans erreur ni envoi. Ces résultats et leurs limites sont détaillés dans le [bilan de génération](docs/experiments/I20-generation-truncation.md).
+Dernière validation fonctionnelle acquise : **559 tests réussis**, sans échec, erreur ou test ignoré : 446 unitaires/parcours, 87 SQLite et 26 HTTP. Un contrôle séparé avec le modèle local a traité vingt emails synthétiques en vingt brouillons non approuvés, sans erreur ni envoi. 
 
 ## Préparer le modèle local
 
@@ -107,11 +107,6 @@ Les réponses locales figurent dans **Brouillons**, les transmissions simulées 
 
 Pour un email dont la rédaction a échoué, l’ouvrir dans **Assistant MAS** et demander une nouvelle génération. Les compteurs et l’historique conservent les échecs précédents.
 
-## Dossiers et disposition
-
-La recherche porte sur le sujet, le corps et les adresses du dossier courant. Lecture, favoris et classement sont persistés. Archiver un reçu ou le déplacer vers Spam/Corbeille ne le détruit pas ; **Remettre en réception** le restaure. Un reçu en Spam/Corbeille doit être restauré avant génération ou envoi. Le classement du spam est manuel.
-
-Les colonnes occupent initialement environ 13 % pour les dossiers, 69 % pour la liste et 18 % pour la lecture. Les séparateurs sont ajustables ; leurs proportions sont conservées pendant les redimensionnements de la session. Les largeurs minimales et le défilement préservent l’accès aux contrôles dans une fenêtre réduite.
 
 ## Configuration
 
@@ -180,14 +175,10 @@ Pour générer ou relire en console, démarrer d’abord le moteur avec `./scrip
 | `src/main/resources` | Styles de l’interface |
 | `src/test/java` | Tests unitaires, parcours et intégrations |
 | `config/` | Agents, prompts, politiques de routage et sources synthétiques |
-| `data/demo/` | Emails de démonstration |
 | `scripts/` | Préparation locale du moteur |
-| `docs/experiments/` | Bilans de validation et limites observées |
 
 ## Limites
 
 Le petit modèle peut produire des erreurs, des formulations maladroites ou une réponse incomplète. La relecture humaine est indispensable. Le contrôle fonctionnel sur vingt messages ne remplace pas une évaluation qualitative ou une comparaison avec un agent générique.
 
 La recherche de contexte est lexicale, sans base vectorielle. Les pièces jointes, la composition indépendante d’un nouvel email, les labels Gmail personnalisés et la réconciliation automatique des envois incertains ne sont pas implémentés. Le stockage suppose un utilisateur local de confiance.
-
-Le rapport est rédigé ; les noms, numéros étudiants et contributions réelles des membres restent à renseigner avant dépôt. Les expériences comparatives décrites comme protocole proposé ne sont pas encore exécutées. Les mesures du lot synthétique sont fournies dans `docs/report/results.json`, avec leur script de recalcul.
